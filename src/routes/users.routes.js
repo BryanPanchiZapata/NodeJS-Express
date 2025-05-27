@@ -5,9 +5,12 @@ import {
   createUser,
   deleteUser,
   updateUser,
+  getPing
 } from "../controllers/users.controller.js";
 
 const router = Router();
+
+router.get("/", getPing);
 
 router.get("/users", getUsers);
 

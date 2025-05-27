@@ -1,5 +1,9 @@
 import { pool } from "../db.js";
 
+export const getPing = async(req, res)=>{
+  return res.json({message:"Api is working"});
+}
+
 export const getUsers = async (req, res) => {
   const { rows } = await pool.query("SELECT * FROM usersnew");
   return res.json(rows);
